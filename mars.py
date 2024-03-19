@@ -9,17 +9,17 @@ from pptx import Presentation
 import docx
 import xlrd
 from bs4 import BeautifulSoup
-from langchain_community.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import GooglePalmEmbeddings
 from langchain_community.llms import GooglePalm
 from langchain_community.vectorstores import FAISS
-from langchain_community.chains import ConversationalRetrievalChain
-from langchain_community.memory import ConversationBufferMemory
+from langchain.chains import ConversationalRetrievalChain
+from langchain.memory import ConversationBufferMemory
 from multiprocessing import Pool
 import cv2
 import pytesseract
 import numpy as np
-from langchain_core.messages import AIMessage, HumanMessage
+from langchain_core.messages import HumanMessage, AIMessage
 import logging
 from typing import Union
 import speech_recognition as sr
