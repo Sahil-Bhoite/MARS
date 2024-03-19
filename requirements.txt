@@ -13,8 +13,7 @@ markdown-it-py==3.0.0
 Markdown==3.5.2
 markdownlit==0.0.7
 numpy==1.26.4
-opencv_python_headless==4.9.0.80
-opencv-python==4.9.0.80
+opencv-python-headless==4.9.0.80
 pandas==1.5.3
 pdf2docx==0.5.8
 PyPDF2==3.0.1
