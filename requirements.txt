@@ -4,7 +4,6 @@ langchain==0.1.12
 langchain_core==0.1.32
 Markdown==3.5.2
 numpy==1.26.4
-opencv_python==4.9.0.80
 opencv_python_headless==4.9.0.80
 pandas==1.5.3
 PyPDF2==3.0.1
@@ -43,7 +42,6 @@ pdf2docx==0.5.8
 python-docx==1.1.0
 xlrd==1.2.0
 beautifulsoup4==4.8.2
-langchain==0.1.10
 langchain-community==0.0.28
 langchain-core==0.1.31
 langchain-experimental==0.0.50
@@ -51,10 +49,8 @@ langchain-text-splitters==0.0.1
 opencv-python==4.9.0.80
 opencv-python-headless==4.9.0.80
 pytesseract==0.3.10
-numpy==1.26.3
 langchain-core==0.1.31
 st-annotated-text==4.0.1
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl#sha256=86cc141f63942d4b2c5fcee06630fd6f904788d2f0ab005cce45aadb8fb73889
 spacy==3.7.2
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
