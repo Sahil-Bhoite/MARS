@@ -1,7 +1,8 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
-## Try It Now!
+
 ![M.A.R.S Screenshot](mars.png)
+# Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
 
 ## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids!
