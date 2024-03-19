@@ -9,12 +9,12 @@ from pptx import Presentation
 import docx
 import xlrd
 from bs4 import BeautifulSoup
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import GooglePalmEmbeddings
-from langchain.llms import GooglePalm
-from langchain.vectorstores import FAISS
-from langchain.chains import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferMemory
+from langchain_community.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.embeddings import GooglePalmEmbeddings
+from langchain_community.llms import GooglePalm
+from langchain_community.vectorstores import FAISS
+from langchain_community.chains import ConversationalRetrievalChain
+from langchain_community.memory import ConversationBufferMemory
 from multiprocessing import Pool
 import cv2
 import pytesseract
