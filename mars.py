@@ -34,7 +34,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from transformers import pipeline
  
-GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY'] #put your GOOGLE API KEY here 
+os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY # Added for Google API Key for Google Palm 
 
 # Define the Hugging Face model uncomment below line if you don't have access to Google Palm API
 #Ulm = pipeline('text-generation', model='google/flan-t5-xxl', tokenizer='google/flan-t5-xxl')  # Uncomment for Hugging Face model 
