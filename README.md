@@ -1,5 +1,8 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
+## Try It Now!
+Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
+
 ## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids!
 
 ## Introduction
@@ -72,9 +75,9 @@ To get started with M.A.R.S, follow these steps:
 3. Run the `main.py` file to launch the application.
 4. Upload your files and start exploring the various functionalities offered by M.A.R.S.
 
+
 ## Feedback and Contributions
 Your feedback is valuable in improving M.A.R.S and making it even more useful for users. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request on GitHub.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-
