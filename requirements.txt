@@ -6,7 +6,7 @@ extra-streamlit-components==0.1.70
 google-api-python-client==2.120.0
 google-generativeai==0.3.2
 langchain-community==0.0.28
-langchain-core==0.1.31
+langchain-core==0.1.32
 langchain-experimental==0.0.50
 langchain-text-splitters==0.0.1
 markdown-it-py==3.0.0
