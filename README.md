@@ -74,7 +74,7 @@ With its comprehensive set of features and cutting-edge AI technologies, M.A.R.S
 To get started with M.A.R.S, follow these steps:
 1. Clone the repository to your local machine.
 2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the `main.py` file to launch the application.
+3. Run the `mars.py` file to launch the application.
 4. Upload your files and start exploring the various functionalities offered by M.A.R.S.
 
 
