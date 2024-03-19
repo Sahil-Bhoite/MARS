@@ -5,7 +5,6 @@ docx2txt==0.8
 extra-streamlit-components==0.1.70
 google-api-python-client==2.120.0
 google-generativeai==0.3.2
-langchain==0.1.10
 langchain-community==0.0.28
 langchain-core==0.1.31
 langchain-experimental==0.0.50
