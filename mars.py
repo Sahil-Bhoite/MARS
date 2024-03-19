@@ -33,8 +33,8 @@ from textract import process
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from transformers import pipeline
-
-st.secrete["GOOGLE_API_KEY"] # Done for Streamlit Cloud 
+ 
+os.environ['GOOGLE_API_KEY'] = st.secrets['GOOGLE_API_KEY'] # Done for Streamlit Cloud 
 #os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY # Uncomment and add Google API Key for Google Palm 
 
 # Define the Hugging Face model uncomment below line if you don't have access to Google Palm API
