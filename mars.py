@@ -35,7 +35,7 @@ from sklearn.decomposition import LatentDirichletAllocation
 from transformers import pipeline
  
 os.environ['GOOGLE_API_KEY'] =  'AIzaSyA02NGYXBUx66PlOdM4DJvgMcAEa9Sv4FI' #put your key here 
-
+os.environ['GOOGLE_API_KEY'] = st.secrets['GOOGLE_API_KEY']
 
 # Define the Hugging Face model uncomment below line if you don't have access to Google Palm API
 #Ulm = pipeline('text-generation', model='google/flan-t5-xxl', tokenizer='google/flan-t5-xxl')  # Uncomment for Hugging Face model 
