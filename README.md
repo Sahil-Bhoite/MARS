@@ -1,4 +1,4 @@
-# M.A.R.S (Multi-modal AI Research System) by Sahil Bhoite
+# M.A.R.S (Multi-modal AI Research System) 
 
 ## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids!
 
