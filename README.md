@@ -82,4 +82,4 @@ To get started with M.A.R.S, follow these steps:
 Your feedback is valuable in improving M.A.R.S and making it even more useful for users. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache License](LICENSE).
