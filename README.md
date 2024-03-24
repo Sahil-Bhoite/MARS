@@ -1,7 +1,7 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
 
-[![M.A.R.S Video Sample]([https://example.com/mars.mp4](https://github.com/SahilBoite/MARS/blob/main/mars.mp4))]
+[![M.A.R.S Video Sample](https://example.com/video_thumbnail.png)](https://example.com/mars.mp4)
 
 
 # Try It Now!
