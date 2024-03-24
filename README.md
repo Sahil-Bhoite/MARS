@@ -2,7 +2,7 @@
 
 
 [![M.A.R.S Video Sample](MARS.png)](https://youtu.be/dV-501x7VxU)
-
+*Click the image above to watch the sample video.*
 
 
 # Try It Now!
