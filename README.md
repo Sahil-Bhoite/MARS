@@ -1,10 +1,8 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
 
-<video controls>
-  <source src="mars.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![M.A.R.S Video Sample]([https://example.com/mars.mp4](https://github.com/SahilBoite/MARS/blob/main/mars.mp4))
+
 
 # Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
