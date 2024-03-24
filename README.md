@@ -1,7 +1,7 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
 
-[![M.A.R.S Video Sample](https://youtu.be/dV-501x7VxU)]
+[![M.A.R.S Video Sample](mars.png)](https://youtu.be/dV-501x7VxU)
 
 
 
