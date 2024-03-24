@@ -1,7 +1,11 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
 
-![M.A.R.S Video Sample](mars.mp4)
+<video controls>
+  <source src="mars.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 # Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
 
