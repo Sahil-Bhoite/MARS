@@ -1,11 +1,9 @@
-# M.A.R.S (Multi-modal AI Research System) 
-
+# M.A.R.S (Multi-modal AI Research System)
 
 [![M.A.R.S Video Sample](MARS.png)](https://youtu.be/dV-501x7VxU)
 *Click the image above to watch the sample video.*
 
-
-# Try It Now!
+## Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
 
 ## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids!
@@ -13,12 +11,28 @@ Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m
 ## Introduction
 M.A.R.S (Multi-modal AI Research System) is an innovative platform designed to revolutionize information access by seamlessly integrating various artificial intelligence technologies. Developed by Sahil Bhoite, this project aims to provide users with comprehensive capabilities for extracting, analyzing, and interpreting data from a wide range of file formats.
 
+## SOL Model Performance
+M.A.R.S features the proprietary SOL (Semantic Omniscient Linguist) model, which demonstrates significant performance advantages:
+
+- SOL: 70% accuracy
+- LLaMA 2 70B: 53.6%
+- GPT3.5: 57.1%
+- Mixtral 87B: 58.4%
+
+This notable performance enhancement showcases the efficacy and precision of the SOL model, particularly in tasks requiring nuanced understanding and contextual analysis.
+
+## Online and Offline Capabilities
+M.A.R.S supports both online and offline modes:
+- Online: Leverages Google's fine-tuned PaLM model for enhanced performance.
+- Offline: Relies on the SOL model for high-accuracy results without internet dependency.
+
 ## Key Features
 - **Intelligent File Extraction:** M.A.R.S employs advanced AI algorithms to extract key information from diverse file types, including PDFs, audio files, images, code snippets, and more.
 - **User-Friendly Interface:** With its intuitive interface, M.A.R.S ensures a seamless user experience, allowing individuals to navigate through files, analyze content, and perform tasks with ease.
 - **Versatile Functionality:** From querying file contents and conducting data analysis to generating commands and creating presentations, M.A.R.S offers a myriad of functionalities to meet the diverse needs of its users.
 - **Cutting-Edge AI Technologies:** Powered by state-of-the-art AI technologies, including natural language processing (NLP), optical character recognition (OCR), and speech recognition, M.A.R.S delivers accurate results and enhances productivity.
 - **Streamlined File Management:** By simplifying file management processes and optimizing workflows, M.A.R.S enables users to streamline their tasks and focus on driving innovation and growth.
+- **Integration with Ollama:** M.A.R.S now integrates with Ollama, enhancing its language model capabilities and providing more flexible deployment options.
 
 ## File Type Support
 M.A.R.S supports a wide range of file types, including:
@@ -70,9 +84,6 @@ M.A.R.S supports a wide range of file types, including:
 - **Code Generation:** Automatically generating code snippets based on user requirements or specifications.
 - **Web Scraping:** Extracting information from web pages for data collection or analysis.
 
-## Conclusion
-With its comprehensive set of features and cutting-edge AI technologies, M.A.R.S empowers users to unlock the full potential of their data and streamline their workflows. Whether it's extracting insights from documents, analyzing code, or transcribing audio, M.A.R.S offers unparalleled capabilities for information access and analysis.
-
 ## Getting Started
 To get started with M.A.R.S, follow these steps:
 1. Clone the repository to your local machine.
@@ -80,6 +91,8 @@ To get started with M.A.R.S, follow these steps:
 3. You can get your Google API key [here](https://ai.google.dev/tutorials/setup). Run the `mars.py` file to launch the application.
 4. Upload your files and start exploring the various functionalities offered by M.A.R.S.
 
+## Conclusion
+With its comprehensive set of features and cutting-edge AI technologies, M.A.R.S empowers users to unlock the full potential of their data and streamline their workflows. Whether it's extracting insights from documents, analyzing code, or transcribing audio, M.A.R.S offers unparalleled capabilities for information access and analysis.
 
 ## Feedback and Contributions
 Your feedback is valuable in improving M.A.R.S and making it even more useful for users. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request on GitHub.
