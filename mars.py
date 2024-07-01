@@ -3,7 +3,6 @@ import streamlit as st
 import os
 import io
 import pandas as pd
-import ast
 from PyPDF2 import PdfReader
 from pptx import Presentation
 import docx
@@ -30,14 +29,10 @@ import zipfile
 import rarfile
 import markdown
 from textract import process
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
 from transformers import pipeline
- 
-os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY # Added for Google API Key for Google Palm 
+from langchain_community.chat_models import ChatOllama 
 
-# Define the Hugging Face model uncomment below line if you don't have access to Google Palm API
-#Ulm = pipeline('text-generation', model='google/flan-t5-xxl', tokenizer='google/flan-t5-xxl')  # Uncomment for Hugging Face model 
+os.environ['GOOGLE_API_KEY'] = GOOGLE_API_KEY # Added for Google API Key for Google Palm 
 
 nlp = spacy.load("en_core_web_sm") # Added for Named Entity Recognition (NER) 
 
@@ -380,121 +375,6 @@ def handle_user_feedback(feedback: str):
 def log_event(event: str):
     logger.info(event)
 
-# Function to add a pre-prompt to the MARS
-def add_pre_prompt(prompt, context, data_types, **kwargs):
-    now = datetime.now()
-    pre_prompt = f"""
-GENERAL INSTRUCTIONS: *NEVER INCLUDE THE USER'S QUESTION OR MESSAGE* PROVIDE A DETAILED RESPONSE OF AT LEAST 50 WORDS, 
-ENSURING CLARITY AND CONCISENESS. CITE SOURCES OR PROVIDE REFERENCES WHENEVER APPLICABLE. 
-MAKE SURE YOU DO NOT PROVIDE USELESS INFORMATION ABOUT THE TOPIC.
-(Today is {now.strftime("%d/%m/%Y %H:%M:%S")}, your name is MARS; M.A.R.S is built 
-by Sahil Bhoite, Mahi Jadhav, and Ashlesha Chopne, and its name is M.A.R.S - Multi-model AI Research System.)
-
-PREVIOUS MESSAGE: ({context})
-USER ASKED: {prompt}
-"""
-
-    for data_type in data_types:
-        if data_type == "data":
-            solution = kwargs.get('solution')
-            if len(solution.split()) < 50:
-                pre_prompt += f"HERE IS THE CODE YOU ASKED FOR: {solution}\n"
-                pre_prompt += f"ADD MORE DETAILS TO THE SOLUTION, PROVIDE EXAMPLES, OR EXPLAIN THE LOGIC FURTHER."
-            pre_prompt += f"""
-ENHANCE THE ANSWER BY:
-- Providing concrete examples or real-world scenarios to illustrate concepts effectively.
-- Structuring the response logically with bullet points or step-by-step explanations for clarity.
-- Avoiding generic statements and ensuring depth in analysis.
-- Understanding the user's context and tailoring the response accordingly.
-- Incorporating visuals or diagrams where applicable to enhance comprehension.
-"""
-
-        elif data_type == "code":
-            solution = kwargs.get('solution')
-            if len(solution.split()) < 15:
-                pre_prompt += f"HERE IS THE CODE YOU ASKED FOR: {solution}\n"
-                pre_prompt += f"ADD MORE COMMENTS TO EXPLAIN THE CODE'S FUNCTIONALITY OR OFFER ALTERNATIVE APPROACHES."
-            pre_prompt += f"""
-ENHANCE THE ANSWER BY:
-- Delivering a succinct summary of the code's purpose and functionality upfront.
-- Adding explanatory comments to elucidate complex sections or logic.
-- Offering alternative implementations or optimizations for improved performance.
-- Anticipating potential challenges and providing solutions or workarounds.
-- Adapting the response to address the user's specific goals and requirements.
-"""
-
-        elif data_type == "context":
-            solution = kwargs.get('solution')
-            if len(solution.split()) < 15:
-                pre_prompt += f"HERE IS THE CONTEXT YOU ASKED FOR: {solution}\n"
-                pre_prompt += f"EXPAND ON THE CONTEXT TO PROVIDE MORE DETAILS OR RELATED INFORMATION."
-            pre_prompt += f"""
-EXPAND ON THE ANSWER BY:
-- Providing additional context or background information to enrich understanding.
-- Utilizing analogies or real-world examples to simplify complex concepts.
-- Clarifying common misconceptions or areas of confusion preemptively.
-- Encouraging critical thinking by posing thought-provoking questions.
-- Recommending supplementary resources or further reading for continued learning.
-"""
-
-        elif data_type == "audio":
-            audio_transcription = kwargs.get('audio_transcription')
-            if len(solution.split()) < 50:
-                pre_prompt += f"HERE IS THE TRANSCRIPTION OF THE AUDIO: {solution}\n"
-                pre_prompt += f"ADD MORE INSIGHTS OR CONTEXTUAL INFORMATION TO ENRICH THE TRANSCRIPTION."
-            pre_prompt += f"""
-EXPAND ON THE ANSWER BY:
-- Analyzing the nuances or implications of the audio content beyond mere transcription.
-- Providing additional insights or interpretations to enrich the discussion.
-- Exploring the contextual background of the audio source for deeper understanding.
-- Proposing follow-up inquiries or discussion points to sustain engagement.
-- Relating the audio content to pertinent themes or contemporary issues for relevance.
-"""
-
-        elif data_type == "pdf":
-            pdf_content = kwargs.get('pdf_content')
-            if len(solution.split()) < 15:
-                pre_prompt += f"HERE IS THE CONTENT OF THE PDF: {solution}\n"
-                pre_prompt += f"PROVIDE FURTHER ANALYSIS OR CONTEXTUAL INFORMATION FOR A MORE IN-DEPTH DISCUSSION."
-            pre_prompt += f"""
-ENHANCE THE ANSWER BY:
-- Conducting a comprehensive analysis or critique of the PDF contents.
-- Identifying and elaborating on key findings or arguments supported by evidence.
-- Exploring potential applications or implications across different domains.
-- Inviting discussion on related topics or avenues for further research.
-- Offering supplementary references or resources for deeper exploration.
-"""
-
-        elif data_type == "image":
-            image_text = kwargs.get('image_text')
-            if len(solution.split('\n')) < 15:
-                pre_prompt += f"HERE IS THE TEXT EXTRACTED FROM THE IMAGE: {solution}\n"
-                pre_prompt += f"INTERPRET THE EXTRACTED TEXT AND PROVIDE ADDITIONAL ANALYSIS OR INSIGHTS."
-            pre_prompt += f"""
-BUILD UPON THE ANSWER BY:
-- Analyzing the extracted text for underlying themes or patterns.
-- Considering the visual context of the image to infer broader implications.
-- Generating further discussion by posing open-ended questions or hypotheses.
-- Exploring potential connections between the image content and related topics.
-- Encouraging user engagement through interactive elements or collaborative activities.
-"""
-
-        elif data_type == "other":
-            file_info = kwargs.get('file_info')
-            if len(solution.split()) < 15:
-                pre_prompt += f"HERE IS THE CONTENT FROM THE FILE: {solution}\n"
-                pre_prompt += f"EXPAND ON THE PROVIDED INFORMATION TO OFFER MORE INSIGHTS OR CONTEXT."
-            pre_prompt += f"""
-EXPAND THE ANSWER BY:
-- Integrating additional details or perspectives from the file content.
-- Contextualizing the extracted information within a broader thematic framework.
-- Engaging with the user's inquiry through thoughtful analysis and commentary.
-- Stimulating curiosity and critical thinking with probing questions or hypotheses.
-- Proposing potential applications or implications for practical relevance.
-"""
-    return pre_prompt
-
-# Main Function for M.A.R.S
 def main():
     st.set_page_config(page_title="M.A.R.S 🚀", layout="wide")
     st.header("Multi-model AI Research System")
@@ -507,6 +387,8 @@ def main():
 
     with st.sidebar:
         st.title("M.A.R.S")
+        model_mode = st.toggle("Online Mode")
+
         st.subheader("Upload your Files here")
         files = st.file_uploader("Upload your Files and Click on the NEXT Button", accept_multiple_files=True)
 
@@ -525,7 +407,12 @@ def main():
 
                     text_chunks = get_text_chunks(raw_text)
                     vector_store = get_vector_store(text_chunks)
-                    st.session_state.conversation = get_conversational_chain(vector_store)
+
+                    if model_mode:
+                        st.session_state.conversation = get_conversational_chain_online(vector_store)
+                    else:
+                        st.session_state.conversation = get_conversational_chain_offline(vector_store)
+
                     st.session_state.files_uploaded = True
                     st.success("Processing Done!")
             else:
@@ -540,6 +427,7 @@ def main():
         st.session_state.files_uploaded = False
 
 
+
 # Function to split text into chunks
 def get_text_chunks(text):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
@@ -552,8 +440,15 @@ def get_vector_store(text_chunks):
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     return vector_store
 
-# Function to create a conversational chain
-def get_conversational_chain(vector_store):
+# Function to create a conversational chain using Sol
+def get_conversational_chain_offline(vector_store):
+    sol_model = ChatOllama(model="Sol")  # Initialize the ChatOllama instance with the Sol model (Made for MARS)
+    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+    conversation_chain = ConversationalRetrievalChain.from_llm(llm=sol_model, retriever=vector_store.as_retriever(), memory=memory)
+    return conversation_chain
+
+# Function to create a conversational chain using Palm
+def get_conversational_chain_online(vector_store):
     llm = GooglePalm()
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=vector_store.as_retriever(), memory=memory)
@@ -598,8 +493,8 @@ def user_input(user_question):
             st.error("An error occurred during conversation. Please try again.")
     else:
         st.warning("Please upload files and click 'NEXT' to start the conversation.")
-
-
 # Running the main function
 if __name__ == "__main__":
     main()
+
+
