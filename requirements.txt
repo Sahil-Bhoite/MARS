@@ -42,7 +42,6 @@ streamlit-tags==1.2.8
 streamlit-toggle-switch==1.0.2
 streamlit-vertical-slider==2.5.5
 streamlit==1.31.1
-textract==1.6.5
 transformers==4.38.2
 xlrd==1.2.0
 
