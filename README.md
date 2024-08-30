@@ -101,7 +101,6 @@ Your feedback is valuable in improving M.A.R.S and making it even more useful fo
 This project is licensed under the [Apache License](LICENSE).
 
 ## About the Developer
-Sahil Bhoite is a talented software engineer and the creator of the M.A.R.S project. You can find more information about him and his work on the following platforms:
 
 LinkedIn: [Sahil Bhoite](https://www.linkedin.com/in/sahil-bhoite/)
 Portfolio: [Sahil Bhoite's Portfolio](https://sahil-bhoite.github.io/Portfolio/)
