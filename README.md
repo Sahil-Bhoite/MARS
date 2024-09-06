@@ -1,106 +1,96 @@
-# M.A.R.S (Multi-modal AI Research System)
+# 🐂 Bull's AI: Algorithmic Stock Prediction
 
-[![M.A.R.S Video Sample](MARS.png)](https://youtu.be/dV-501x7VxU)
-*Click the image above to watch the sample video.*
+![Bull's AI Logo](BullsAI.png)
 
-## Try It Now!
-Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
+## 📊 Empowering Investors with Machine Learning
 
-## Experience the power of M.A.R.S - your ultimate AI assistant, like a chatbot on steroids!
+**[Try Bull's AI Now](https://bullai.streamlit.app)**
 
-## Introduction
-M.A.R.S (Multi-modal AI Research System) is an innovative platform designed to revolutionize information access by seamlessly integrating various artificial intelligence technologies. Developed by Sahil Bhoite, this project aims to provide users with comprehensive capabilities for extracting, analyzing, and interpreting data from a wide range of file formats.
+Bull's AI is a cutting-edge stock price prediction platform that harnesses the power of machine learning to assist investors in making informed, data-driven decisions. By combining advanced algorithms with real-time market data, we provide a comprehensive tool for stock analysis and forecasting.
 
-## SOL Model Performance
-M.A.R.S features the proprietary SOL (Semantic Omniscient Linguist) model, which demonstrates significant performance advantages:
+## 🌟 Key Features
 
-- SOL: 70% accuracy
-- LLaMA 2 70B: 53.6%
-- GPT3.5: 57.1%
-- Mixtral 87B: 58.4%
+- **Live Market Data**: Access up-to-the-minute stock prices and crucial financial metrics
+- **Dynamic Visualization**: Explore historical trends and price predictions through interactive charts
+- **ARIMA Forecasting**: Leverage sophisticated statistical models for accurate price projections
+- **In-Depth Stock Profiles**: Obtain comprehensive information on any publicly traded company
+- **Intuitive User Experience**: Seamlessly navigate and analyze stocks with our user-friendly interface
 
-This notable performance enhancement showcases the efficacy and precision of the SOL model, particularly in tasks requiring nuanced understanding and contextual analysis.
+## 🛠️ Technology Stack
 
-## Online and Offline Capabilities
-M.A.R.S supports both online and offline modes:
-- Online: Leverages Google's fine-tuned PaLM model for enhanced performance.
-- Offline: Relies on the SOL model for high-accuracy results without internet dependency.
+- **[Streamlit](https://streamlit.io/)**: Powering our interactive and responsive web interface
+- **[YFinance](https://pypi.org/project/yfinance/)**: Fetching real-time and historical financial data from Yahoo Finance
+- **[StatsModels](https://www.statsmodels.org/)**: Implementing robust ARIMA time series forecasting
+- **[Plotly](https://plotly.com/)**: Generating dynamic and informative financial visualizations
+- **[Pandas](https://pandas.pydata.org/)**: Enabling efficient data manipulation and analysis
 
-## Key Features
-- **Intelligent File Extraction:** M.A.R.S employs advanced AI algorithms to extract key information from diverse file types, including PDFs, audio files, images, code snippets, and more.
-- **User-Friendly Interface:** With its intuitive interface, M.A.R.S ensures a seamless user experience, allowing individuals to navigate through files, analyze content, and perform tasks with ease.
-- **Versatile Functionality:** From querying file contents and conducting data analysis to generating commands and creating presentations, M.A.R.S offers a myriad of functionalities to meet the diverse needs of its users.
-- **Cutting-Edge AI Technologies:** Powered by state-of-the-art AI technologies, including natural language processing (NLP), optical character recognition (OCR), and speech recognition, M.A.R.S delivers accurate results and enhances productivity.
-- **Streamlined File Management:** By simplifying file management processes and optimizing workflows, M.A.R.S enables users to streamline their tasks and focus on driving innovation and growth.
-- **Integration with Ollama:** M.A.R.S now integrates with Ollama, enhancing its language model capabilities and providing more flexible deployment options.
+## 🧠 Machine Learning Models
 
-## File Type Support
-M.A.R.S supports a wide range of file types, including:
-1. PDF
-2. PPT/PPTX
-3. Python scripts (.py)
-4. Microsoft Word documents (.docx, .doc)
-5. Excel spreadsheets (.xls, .xlsx)
-6. CSV files (.csv)
-7. HTML files (.html)
-8. CSS files (.css)
-9. JSON files (.json)
-10. SQL scripts (.sql)
-11. Plain text files (.txt)
-12. Java source code files (.java)
-13. C source code files (.c)
-14. C++ source code files (.cpp)
-15. JavaScript files (.js)
-16. Swift source code files (.swift)
-17. R scripts (.r)
-18. Rust source code files (.rs)
-19. Image files (.jpg, .jpeg, .png, .bmp)
-20. XML files (.xml)
-21. Markdown files (.md)
-22. LaTeX files (.tex)
-23. Zip archives (.zip)
-24. RAR archives (.rar)
-25. Audio files for transcription (.wav)
-26. Websites
+Our stock prediction engine primarily utilizes:
 
-## Functionality and Use Cases
-- **Text Extraction:** Extracting text from various file types for analysis or processing.
-- **Audio Transcription:** Transcribing speech from audio files for documentation or analysis.
-- **Code Analysis:** Extracting and analyzing code snippets for optimization or debugging.
-- **Data Extraction:** Extracting structured data from files like Excel spreadsheets or JSON files.
-- **Document Processing:** Extracting content from Word documents or PDFs for further analysis.
-- **Image Text Recognition:** Extracting text from images for digitization or analysis.
-- **File Compression Handling:** Extracting text from compressed files like ZIP or RAR archives.
-- **Structured Data Handling:** Processing structured data from files like XML or JSON.
-- **Document Markup Conversion:** Converting documents from Markdown or LaTeX format to plain text.
-- **Text Summarization:** Summarizing large documents or articles for quick insights.
-- **Language Translation:** Translating text between different languages for multilingual support.
-- **Named Entity Recognition (NER):** Identifying and categorizing entities within text for analysis.
-- **Sentiment Analysis:** Analyzing sentiment expressed in textual data for understanding public opinion.
-- **Topic Modeling:** Identifying topics or themes present in a collection of documents.
-- **Document Similarity Detection:** Identifying similarities between documents based on content.
-- **Question Answering (QA):** Providing accurate responses to user questions based on relevant information within text data.
-- **Semantic Search:** Retrieving documents or passages relevant to a user's query based on semantic similarity.
-- **Code Generation:** Automatically generating code snippets based on user requirements or specifications.
-- **Web Scraping:** Extracting information from web pages for data collection or analysis.
+1. **AutoRegressive (AR) Model**: 
+   - A core component of the ARIMA family
+   - Implemented via `statsmodels.tsa.ar_model.AutoReg`
+   - Utilizes historical price data to forecast future trends
 
-## Getting Started
-To get started with M.A.R.S, follow these steps:
-1. Clone the repository to your local machine.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. You can get your Google API key [here](https://ai.google.dev/tutorials/setup). Run the `mars.py` file to launch the application.
-4. Upload your files and start exploring the various functionalities offered by M.A.R.S.
+2. **Advanced Time Series Forecasting**:
+   - Employs data splitting for training and testing
+   - Generates predictions on the test set and projects 90 days into the future
 
-## Conclusion
-With its comprehensive set of features and cutting-edge AI technologies, M.A.R.S empowers users to unlock the full potential of their data and streamline their workflows. Whether it's extracting insights from documents, analyzing code, or transcribing audio, M.A.R.S offers unparalleled capabilities for information access and analysis.
+## 🚀 Quick Start Guide
 
-## Feedback and Contributions
-Your feedback is valuable in improving M.A.R.S and making it even more useful for users. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request on GitHub.
+### System Requirements
+- Python 3.7 or higher
+- pip package manager
 
-## License
-This project is licensed under the [Apache License](LICENSE).
+### Setup Instructions
 
-## About the Developer
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/bulls-ai.git
+   ```
+2. Navigate to the project folder:
+   ```
+   cd bulls-ai
+   ```
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Launch the Streamlit app:
+   ```
+   streamlit run 🏠Home.py
+   ```
+5. Access the application at `http://localhost:8501` in your web browser
 
-LinkedIn: [Sahil Bhoite](https://www.linkedin.com/in/sahil-bhoite/)
-Portfolio: [Sahil Bhoite's Portfolio](https://sahil-bhoite.github.io/Portfolio/)
+## 📚 Usage Guide
+
+1. **Stock Information**: Choose a stock to view detailed company data and key performance indicators
+2. **Price Prediction**: Select a stock, time frame, and interval to generate price forecasts
+3. **Market Analysis**: Utilize our interactive charts to identify trends and make strategic decisions
+
+## ⚠️ Important Considerations
+
+- Our AR model assumes that future prices correlate with historical data, which may not always hold true in volatile markets
+- The current model does not account for external factors such as breaking news or macroeconomic shifts
+- Stock market prediction is inherently complex and uncertain; use these forecasts as one tool among many in your investment strategy
+
+## 🔮 Roadmap
+
+We're committed to continuous improvement. Future enhancements may include:
+
+- Integration of more sophisticated ARIMA or SARIMA models for nuanced time series analysis
+- Incorporation of advanced machine learning algorithms like Random Forests or Gradient Boosting Machines
+- Implementation of deep learning architectures such as LSTM networks for improved pattern recognition
+- Integration of diverse external data sources for more comprehensive market analysis
+
+## 📄 Licensing
+
+This project is distributed under the MIT License. For full details, please refer to the [LICENSE.md](LICENSE.md) file.
+
+## 👨‍💻 Meet the Team
+
+- [Sahil Bhoite](https://www.linkedin.com/in/sahil-bhoite/): AI & Tech Enthusiast | LLMs | Java Developer | Machine Learning & Data Science Specialist | Python | Pune
+- [Maheshwari Jadhav](https://www.linkedin.com/in/maheshwari-jadhav/): Java | Python | AI/ML | Generative AI | Frontend Development | MITAOE'25
+
+We welcome contributions and feedback from the community. Together, let's revolutionize stock market analysis!
