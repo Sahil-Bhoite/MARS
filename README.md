@@ -1,9 +1,11 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
+<video width="100%" controls>
+  <source src="mars.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-[![M.A.R.S Video Sample](MARS.png)](https://youtu.be/dV-501x7VxU)
-*Click the image above to watch the sample video.*
-
+*M.A.R.S demonstration video*
 
 # Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
@@ -79,7 +81,6 @@ To get started with M.A.R.S, follow these steps:
 2. Install the required dependencies using `pip install -r requirements.txt`.
 3. You can get your Google API key [here](https://ai.google.dev/tutorials/setup). Run the `mars.py` file to launch the application.
 4. Upload your files and start exploring the various functionalities offered by M.A.R.S.
-
 
 ## Feedback and Contributions
 Your feedback is valuable in improving M.A.R.S and making it even more useful for users. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or submit a pull request on GitHub.
