@@ -1,9 +1,7 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
-<video width="100%" controls>
-  <source src="https://github.com/Sahil-Bhoite/MARS/blob/main/MARS.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch the video](https://github.com/Sahil-Bhoite/MARS/blob/main/MARS.mp4)
+
 
 *M.A.R.S demonstration video*
 
