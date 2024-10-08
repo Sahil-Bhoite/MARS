@@ -2,7 +2,7 @@
 
 
 
-*M.A.R.S demonstration video*
+[*M.A.R.S demonstration video*](https://github.com/user-attachments/assets/f6ef7dda-727a-4e59-b5b3-656f49d1c3f3)
 
 # Try It Now!
 Experience the power of M.A.R.S yourself by visiting [M.A.R.S Web App](https://m-a-r-s.streamlit.app/).
