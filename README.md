@@ -1,6 +1,6 @@
 # M.A.R.S (Multi-modal AI Research System) 
 
-https://github.com/Sahil-Bhoite/MARS/assets/134361705/9c37bfd7-45e0-4203-8aa3-40c95580a1f3
+
 
 *M.A.R.S demonstration video*
 
